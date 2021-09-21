@@ -1,5 +1,8 @@
 package queue;
 
+
+import org.junit.jupiter.api.Test;
+
 /**
  * description: CircleArrayQueueDemo <br>
  * date: 2021/7/15 23:48 <br>
@@ -8,6 +11,11 @@ package queue;
  */
 public class CircleArrayQueueDemo {
     public static void main(String[] args) {
+
+        int[] ints = new int[3];
+        for (int i = 0; i < ints.length; i++) {
+            System.out.println(ints[i]);
+        }
         CircleArrayQueueDemo circleArrayQueue = new CircleArrayQueueDemo(5);
         for (int i = 0; i < 5; i++) {
 //           circleArrayQueue.removeElement();
@@ -74,4 +82,5 @@ public class CircleArrayQueueDemo {
     private int currentSize(){
         return (rear - front + size)%size;
     }
+
 }
